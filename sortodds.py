@@ -3,6 +3,7 @@
 
 # sort_array([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
 
+import Test
 
 def sort_array(arr):
 	# Sort an array of the odd numbers from original array
@@ -11,8 +12,6 @@ def sort_array(arr):
   	# Create and return a new array with odd numbers replaced from the descending odds array
 	return [x if x % 2 == 0 else odds.pop() for x in arr]
 
-arr = [3,2,1,4,4,6,1,8]
-sorted_odds = sort_array(arr)
-
+Test.assert_equals(sort_array([3,2,1,4,4,6,1,8]), [1,2,1,4,4,6,3,8])
 # print(arr) # [3,2,1,4,4,6,1,8]
 # print(sorted_odds) # [1,2,1,4,4,6,3,8]
